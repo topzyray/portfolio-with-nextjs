@@ -202,7 +202,7 @@ export const workExperience = [
   {
     id: 3,
     title: "Upskilling and Reskilling",
-    desc: "Acquiring skills further skills in Full-stack development.",
+    desc: "Acquiring skills further skills in Full-stack development. I am also looking for opportunities to improve on my skills.",
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/exp2.svg",
   },
