@@ -90,7 +90,7 @@ export const projects = [
       "acernity.webp",
       "/fm.svg",
     ],
-    link: "https://github.com/topzyray",
+    link: "https://github.com/topzyray/portfolio-with-nextjs.git",
   },
   {
     id: 3,
@@ -206,7 +206,7 @@ export const workExperience = [
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/exp2.svg",
   },
- 
+
   // {
   //   id: 4,
   //   title: "Lead Frontend Developer",
