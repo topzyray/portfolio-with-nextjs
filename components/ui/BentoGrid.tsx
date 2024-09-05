@@ -8,6 +8,7 @@ import { useState } from "react";
 import animationData from "@/data/confetti.json";
 import MagicButton from "./MagicButton";
 import { IoCopyOutline } from "react-icons/io5";
+import { BiDownload } from "react-icons/bi";
 
 export const BentoGrid = ({
   className,
@@ -48,6 +49,7 @@ export const BentoGridItem = ({
   spareImg?: string;
 }) => {
   const [copied, setCopied] = useState(false);
+  const [cvDownload, setCVDownload] = useState(false);
 
   const handleCopy = () => {
     navigator.clipboard.writeText(`taiwo.tope@proton.me`);
@@ -55,6 +57,13 @@ export const BentoGridItem = ({
     setTimeout(() => {
       setCopied(false);
     }, 1000);
+  };
+
+  const handleDownload = () => {
+    setCVDownload(true);
+    setTimeout(() => {
+      setCVDownload(false);
+    }, 2000);
   };
 
   return (
@@ -97,8 +106,7 @@ export const BentoGridItem = ({
           )}
         </div>
         {id === 6 && (
-          <BackgroundGradientAnimation>
-          </BackgroundGradientAnimation>
+          <BackgroundGradientAnimation></BackgroundGradientAnimation>
         )}
 
         <div
@@ -122,19 +130,21 @@ export const BentoGridItem = ({
           {id === 3 && (
             <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:right-2">
               <div className="flex flex-col justify-center gap-3 lg:gap-3.5">
-                {["React.js", "Next.js", "Typscript", "JavaScript"].map((item) => (
-                  <span
-                    key={item}
-                    className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]"
-                  >
-                    {item}
-                  </span>
-                ))}
+                {["React.js", "Next.js", "Typscript", "JavaScript"].map(
+                  (item) => (
+                    <span
+                      key={item}
+                      className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                    >
+                      {item}
+                    </span>
+                  )
+                )}
                 {/* <span className="py-4 px-3 rounded-lg text-center bg-[#10132E]" /> */}
               </div>
               <div className="flex flex-col justify-center gap-3 lg:gap-3.5">
                 {/* <span className="py-4 px-3 rounded-lg text-center bg-[#10132E]" /> */}
-                {["Node.js", "MongoDB", "AWS"].map((item) => (
+                {["Node.js", "MongoDB", "MySQL", "PostgreSQL"].map((item) => (
                   <span
                     key={item}
                     className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]"
@@ -161,13 +171,43 @@ export const BentoGridItem = ({
                 />
               </div>
 
-              <MagicButton
-                title={copied ? "Email copied" : "Copy my email"}
-                icon={<IoCopyOutline />}
-                position="left"
-                otherClasses="bg-[#161a31]"
-                handleClick={handleCopy}
-              />
+              <div className={`absolute -bottom-10 right-0`}>
+                <Lottie
+                  options={{
+                    loop: cvDownload,
+                    autoplay: cvDownload,
+                    animationData: animationData,
+                    rendererSettings: {
+                      preserveAspectRatio: "xMidYMid slice",
+                    },
+                  }}
+                />
+              </div>
+
+              <div className="">
+                <MagicButton
+                  title={copied ? "Email copied" : "Copy my email"}
+                  icon={<IoCopyOutline />}
+                  position="left"
+                  otherClasses="bg-[#161a31]"
+                  handleClick={handleCopy}
+                />
+
+                <a
+                  href="/docs/Tope_Taiwo_CV.docx"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  download
+                >
+                  <MagicButton
+                    title={cvDownload ? "Started" : "Download my CV"}
+                    icon={<BiDownload />}
+                    position="left"
+                    otherClasses="bg-[#161a21]"
+                    handleClick={handleDownload}
+                  />
+                </a>
+              </div>
             </div>
           )}
         </div>
