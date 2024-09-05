@@ -184,7 +184,7 @@ export const BentoGridItem = ({
                 />
               </div>
 
-              <div className="">
+              <div className="flex flex-col justify-center items-center gap-3 md:gap-0">
                 <MagicButton
                   title={copied ? "Email copied" : "Copy my email"}
                   icon={<IoCopyOutline />}
