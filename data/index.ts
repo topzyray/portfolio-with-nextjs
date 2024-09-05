@@ -8,12 +8,13 @@ export const navItems = [
 export const gridItems = [
   {
     id: 1,
-    title: "Fostering open communication and client collaboration is my top priority.",
+    title:
+      "Fostering open communication and client collaboration is my top priority.",
     description: "",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
     titleClassName: "justify-end",
-    img: "/b1.svg",
+    img: "/b1.jpg",
     spareImg: "",
   },
   {
@@ -110,11 +111,28 @@ export const projects = [
   },
   {
     id: 5,
-    title: "Blogging API in Node.js with Express",
+    title: "Blogging API in Node.js with Authentication and Authorization",
     des: "A Blogging API created with Node.js with Express framework, database in MongoDB and hosed on Render.com.",
     img: "/nodejs.svg",
     iconLists: ["/nodejs.svg", "/mongodb.svg", "/js.svg"],
     link: "https://github.com/topzyray/blogging-api.git",
+  },
+  {
+    id: 6,
+    title:
+      "Expense Tracker API in Node.js with Authentication and Authorization",
+    des: "A Expense Tracker API created with Node.js with Express framework, database in MongoDB.",
+    img: "/nodejs.svg",
+    iconLists: ["/nodejs.svg", "/mongodb.svg", "/js.svg"],
+    link: "https://github.com/topzyray/expensetrackerapi.git",
+  },
+  {
+    id: 7,
+    title: "Fashionshop - Full Stack e-Commerce",
+    des: "A full-stack e-Commerce web application built using Next.js, TypeScript, MongoDB and Tailwind.",
+    img: "/fashionshop.png",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/mongodb.svg"],
+    link: "https://github.com/topzyray/fashionshop.git",
   },
 ];
 

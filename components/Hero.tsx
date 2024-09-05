@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <div className="pb-20 pt-36">
+    <div className="pb-10 pt-10 md:pb-20 md:pt-36">
       <div>
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
@@ -28,7 +28,7 @@ const Hero = () => {
         {/* <button className="text-white fixed top-5 right-5">Toggle Theme</button> */}
 
         {/* My Avatar */}
-        <Link
+        {/* <Link
           href="https://github.com/topzyray"
           target="
         _blank"
@@ -38,17 +38,29 @@ const Hero = () => {
             alt="Tope Taiwo"
             className="z-50 w-8 md:w-10 lg:w-12 text-white fixed top-2 left-2 md:top-5 md:left-5 rounded-full shadow-2xl hover:border-white-200"
           />
-        </Link>
+        </Link> */}
 
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <h2 className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
-            You are welcome
+            Hello, World!
           </h2>
 
           <TextGenerateEffect
-            className="text-center text-[40px] md:text-5xl lg:text-6xl"
+            className="text-center text-[35px] md:text-5xl lg:text-6xl"
             words="I Transform Ideas into Integrated User Experiences through Coding"
           />
+
+          <Link
+            href="https://github.com/topzyray"
+            target="
+        _blank"
+          >
+            <img
+              src="/tope.png"
+              alt="Tope Taiwo"
+              className="w-16 md:w-20 lg:w-24 py-6 text-white rounded-full shadow-2xl hover:border-white-200"
+            />
+          </Link>
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
             Hi, I&apos;m Tope Taiwo, a Software Developer based in Nigeria.
